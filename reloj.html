@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+#img_map { position:relative; width:1824px; height:833px; }
+.point { display:block; width:16px; height:16px; position:absolute; }
+span{display:block; background: white;}
+</style>
+</head>
+<body background="plano.png">
+<p>
+  <span>MAPA RELOJ CONTROL.</span>
+</p>
+<div id="img_map">
+
+
+<a href="#" class="point" style="top: 523px; left: 460px;"><span>1</span><img src="point.png"></a>
+<a href="#" class="point" style="top: 570px; left: -8px;"><span>1</span><img src="point.png"></a>
+<a href="#" class="point" style="top: 350px; left: 171px;">3<img src="point.png"></a>
+<a href="#" class="point" style="top: 349px; left: 193px;"><img src="point.png"></a>
+<a href="#" class="point" style="top: 347px; left: 214px;"><img src="point.png"></a>
+<a href="#" class="point" style="top: -36px; left: 1479px;"><img src="point.png"></a>
+
+</div>
+
+<script type="text/javascript" src="jquery-3.1.1.js"></script>
+<script>
+function randomFromTo(from, to){
+   return Math.floor(Math.random() * (to - from + 1) + from);
+}
+
+jQuery(document).ready(function () { 
+	
+
+
+    $(document).click(function (e) { 
+      var $map = jQuery('#img_map');
+	  var $point = jQuery('<a href="#" class="point"><img src="point.png" /></a>').css({top:(e.pageY-50) + 'px', left:(e.pageX-16) + 'px'});
+           
+	  $map.append($point); 
+	 
+	  
+	  
+	});
+	
+	
+});
+</script>
+</body>
+</html>
